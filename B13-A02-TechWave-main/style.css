@@ -1,4 +1,4 @@
-/* General Setup */
+
 :root {
     --bg-dark: #23173d;
     --card-bg: #1d094a;
@@ -29,8 +29,7 @@ body {
 
 .logo span {
     background: var(--gradient-main);
-    /* -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
+    
     font-weight: bold;
 }
 
