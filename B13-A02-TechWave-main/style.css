@@ -230,8 +230,162 @@ body {
     }
 }
 
+/* ১. হোয়াই চুজ টেকওয়েভ - বেন্টো গ্রিড লেআউট */
+.why-choose-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; /* বাম পাশের কার্ডটি চিকন, ডান পাশেরগুলো চওড়া */
+    gap: 20px;
+    padding: 40px 8%;
+}
 
+.feature-card {
+    background: #1a0b3d; /* ডার্ক পার্পল ব্যাকগ্রাউন্ড */
+    padding: 30px;
+    border-radius: 24px;
+    position: relative;
+}
 
+/* বাম পাশের বড় কার্ডটি ২ লাইন দখল করবে */
+.feature-card.large {
+    grid-row: span 2;
+}
 
+/* আইকন গ্রেডিয়েন্ট স্টাইল */
+.feature-card i {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    display: inline-block;
+    background: linear-gradient(to right, #facc15, #ec4899, #8b5cf6); /* ছবির মতো গ্রেডিয়েন্ট */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
+/* ২. এপিসোড কার্ড ডিজাইন */
+.episode-card {
+    background: #1a0b3d;
+    border-radius: 24px;
+    overflow: hidden;
+}
 
+.thumbnail {
+    position: relative;
+    height: 220px;
+}
+
+/* প্লে বাটন মাঝখানে সেট করা */
+.play-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(45deg, #ec4899, #8b5cf6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(236, 72, 153, 0.5);
+}
+
+/* ১. হোয়াই চুজ টেকওয়েভ - বেন্টো গ্রিড লেআউট */
+.why-choose-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; /* বাম পাশের কার্ডটি চিকন, ডান পাশেরগুলো চওড়া */
+    gap: 20px;
+    padding: 40px 8%;
+}
+
+.feature-card {
+    background: #1a0b3d; /* ডার্ক পার্পল ব্যাকগ্রাউন্ড */
+    padding: 30px;
+    border-radius: 24px;
+    position: relative;
+}
+
+/* বাম পাশের বড় কার্ডটি ২ লাইন দখল করবে */
+.feature-card.large {
+    grid-row: span 2;
+}
+
+/* আইকন গ্রেডিয়েন্ট স্টাইল */
+.feature-card i {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    display: inline-block;
+    background: linear-gradient(to right, #facc15, #ec4899, #8b5cf6); /* ছবির মতো গ্রেডিয়েন্ট */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ২. এপিসোড কার্ড ডিজাইন */
+.episode-card {
+    background: #1a0b3d;
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.thumbnail {
+    position: relative;
+    height: 220px;
+}
+
+/* প্লে বাটন মাঝখানে সেট করা */
+.play-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(45deg, #ec4899, #8b5cf6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(236, 72, 153, 0.5);
+}
+
+/* ৩. ফুটার সেকশন (মাঝখানে আনার জন্য) */
+.footer {
+    padding: 100px 20px;
+    background-image: url('wave-bg.png'); /* আপনার ওয়েভ ইমেজ */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* সব কন্টেন্ট মাঝখানে আনবে */
+    text-align: center;
+}
+
+.footer-logo {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.footer-logo span {
+    background: linear-gradient(to right, #ec4899, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.footer-links {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+/* ৪. রেসপনসিভ ফিক্স */
+@media (max-width: 900px) {
+    .why-choose-grid {
+        grid-template-columns: 1fr; /* মোবাইলে সব কার্ড এক কলামে আসবে */
+    }
+}
